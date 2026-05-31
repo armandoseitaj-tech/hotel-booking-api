@@ -1,16 +1,15 @@
 namespace HotelBookingApi.Models;
 
-public class Room
+public class Hotel
 {
     public int Id { get; set; }
 
-    public string RoomNumber { get; set; } = string.Empty;
+    public string Name { get; set; } = string.Empty;
 
-    public decimal PricePerNight { get; set; }
+    public string City { get; set; } = string.Empty;
 
-    public bool IsAvailable { get; set; }
+    public string Address { get; set; } = string.Empty;
 
-    public int HotelId { get; set; }
-
-    public Hotel Hotel { get; set; } = null!;
+    public ICollection<Room> Rooms { get; set; }
+        = new List<Room>();
 }
